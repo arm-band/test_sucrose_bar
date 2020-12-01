@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@use "../../foundation" as f;
+
+.c-sucrosebar {
+    max-height: 520px;
+    overflow-y: scroll;
+    box-shadow: inset 0 0 0 1px f.$main-color;
+    padding: 1rem 2rem;
+    h3 {
+        color: f.$main-color;
+        p {
+            font-size: 60%;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+    /* スクロールバーのカスタマイズ */
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: f.$main-color;
+        border-left: solid 1px f.$main-color_d;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: f.$accent-color;
+        border-radius: 1rem;
+        box-shadow: inset 0 0 0 2px f.$bg-color;
+    }
+    /* スクロールバーのカスタマイズ / ここまで */
+}
